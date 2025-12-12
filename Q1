@@ -1,1 +1,13 @@
+name: fmo
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - scipy
+  - matplotlib
+  - qutip
+  - tqdm
+  - jupyter
+  - pandas
 
