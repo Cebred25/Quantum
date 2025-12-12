@@ -1,0 +1,57 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# ===== Conda =====
+.conda/
+conda-bld/
+*.conda
+*.mamba
+*.egg-info/
+.eggs/
+
+# ===== Jupyter =====
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ===== OS / Editor =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== Logs / Outputs =====
+*.log
+logs/
+results/
+fmo_simulation_data/
+fmo_sweep_data/
+
+# ===== Data (keep example data only) =====
+data/raw/
+data/processed/
+*.h5
+*.hdf5
+
+# ===== Figures =====
+*.png
+*.pdf
+*.svg
+# (If you DO want to track figures, delete the 3 lines above.)
+
+# ===== Packaging / Build =====
+build/
+dist/
+*.whl
+*.tar.gz
+
+# ===== Misc =====
+*.tmp
+*.bak
