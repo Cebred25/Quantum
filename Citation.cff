@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "FMO Complex Exciton Transport Simulator"
+type: software
+authors:
+  - family-names: "Brown"
+    given-names: "Connor"
+repository-code: "https://github.com/<YOUR_GITHUB_USERNAME>/fmo-exciton-transport"
+license: "MIT"
+keywords:
+  - "FMO"
+  - "exciton transport"
+  - "quantum biology"
+  - "Lindblad master equation"
+  - "dephasing"
+  - "QuTiP"
+  - "Hamiltonian perturbations"
+preferred-citation:
+  type: software
+  title: "FMO Complex Exciton Transport Simulator"
+  authors:
+    - family-names: "Brown"
+      given-names: "Connor"
+  year: 2025
+  url: "https://github.com/<YOUR_GITHUB_USERNAME>/fmo-exciton-transport"
