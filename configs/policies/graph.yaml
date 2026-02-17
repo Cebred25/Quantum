@@ -1,1 +1,29 @@
-#hi
+# 3D graph construction policy.
+
+# Connectivity
+edge_mode: "radius"      # radius | knn
+radius_cutoff: 5.0
+knn_k: 16
+
+# Geometry feature toggles
+include_distances: true
+include_angles: false
+include_dihedrals: false
+
+# Which atom/bond feature names your featurizer recognizes
+atom_features:
+  - atomic_num
+  - formal_charge
+  - degree
+  - hybridization
+  - aromatic
+  - in_ring
+
+bond_features:
+  - bond_type
+  - conjugated
+  - in_ring
+
+# Distance scaling/clipping
+distance_unit: "angstrom"
+distance_clip: 10.0
