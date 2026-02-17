@@ -1,0 +1,26 @@
+# Loss configuration
+
+primary_loss:
+  regression: "mse"              # mse | huber | gaussian_nll
+  classification: "bce"          # bce | focal
+
+# Masking behavior
+mask_missing: true
+ignore_nan_targets: true
+
+# Learned uncertainty weighting (Kendall et al.)
+uncertainty_weighting:
+  enabled: true
+  initial_log_sigma: 0.0
+  min_log_sigma: -5.0
+  max_log_sigma: 5.0
+
+# Manual fallback weights (used if uncertainty disabled)
+task_weights:
+  physicochemical: 1.0
+  admet: 1.0
+  toxicity: 1.0
+
+# Regularization
+weight_decay: 0.0001
+label_smoothing: 0.0
