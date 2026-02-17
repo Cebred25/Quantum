@@ -1,1 +1,29 @@
-#hi
+# Standardization policy for SMILES -> canonical molecule
+# Used BEFORE protonation/tautomer/conformer generation.
+
+canonicalize: true
+
+# Fragment handling
+remove_salts: true
+largest_fragment: true
+
+# Charge / cleanup
+neutralize: false          # keep false unless you explicitly want neutral forms
+strip_isotopes: false
+allow_metals: true
+
+# Optional SMARTS allow/deny lists
+# - disallowed_smarts: patterns that cause molecule to be rejected/flagged
+# - keep_smarts: patterns you want to preserve even if they look like salts
+disallowed_smarts: []
+keep_smarts: []
+
+# Controls how strict to be about invalid inputs
+fail_on_parse_error: true
+fail_on_valence_error: true
+
+# Canonical SMILES options (if you generate canonical SMILES yourself)
+canonical_smiles:
+  isomeric: true
+  kekule: false
+  explicit_hydrogens: false
