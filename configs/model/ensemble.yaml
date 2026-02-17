@@ -1,0 +1,36 @@
+# Deep ensemble policy
+
+strategy: "deep_ensemble"        # deep_ensemble | snapshot | shared_trunk
+
+num_members: 5
+
+# Snapshot ensemble settings (used if strategy = snapshot)
+snapshot:
+  enabled: false
+  num_snapshots: 5
+  lr_cycle_epochs: 10
+
+# Shared trunk multi-head approximation
+shared_trunk:
+  enabled: false
+  num_heads: 5
+
+# Distillation to student model
+distillation:
+  enabled: true
+  student_hidden_dim: 256
+  temperature: 2.0
+  loss_weight: 0.5
+
+# Adaptive inference (save compute)
+adaptive_inference:
+  enabled: true
+  min_members: 2
+  max_members: 5
+  disagreement_threshold: 0.15
+
+# Uncertainty aggregation
+uncertainty:
+  epistemic: "variance"          # variance | entropy
+  aleatoric_from_head: true
+  combine: "sum"                 # sum | sqrt_sum_sq
