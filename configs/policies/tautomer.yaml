@@ -1,1 +1,13 @@
-#hi
+# Tautomer enumeration + selection policy.
+
+method: "rdkit"          # none | rdkit
+enumerate: true
+max_tautomers: 16
+
+# How to pick the "main" tautomer for caching/graph construction
+pick: "canonical"        # canonical | best_score
+
+# RDKit enumerator tuning
+reassign_stereo: true
+remove_sp3_stereo: false
+remove_bond_stereo: false
