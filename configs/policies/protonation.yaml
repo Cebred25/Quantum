@@ -1,1 +1,10 @@
-#hi
+# Protonation/protomer policy.
+# NOTE: RDKit is not a full pH protonation engine; these values are still useful
+# as an API contract for future ChemAxon/Epik/OpenEye integration.
+
+method: "rdkit"          # none | rdkit | (future: chemaxon | epik)
+target_pH: 7.4
+pH_tolerance: 0.5
+
+keep_formal_charges: true
+max_variants: 1          # 1 = choose a single representation
