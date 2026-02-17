@@ -1,1 +1,19 @@
-#hi
+# 3D conformer generation policy.
+
+method: "rdkit_etkdg"     # currently only rdkit_etkdg
+max_confs: 20
+seed: 0
+
+# Embedding parameters
+embed_params: "ETKDGv3"   # ETKDGv3 | ETKDGv2 | KDG
+prune_rms_thresh: 0.5
+num_threads: 0            # 0 lets RDKit decide
+
+# Optional minimization
+minimize: true
+minimizer: "MMFF"         # MMFF | UFF
+max_minimize_iters: 200
+
+# Selection/filtering
+keep_n_lowest_energy: 10
+energy_window_kcal: 20.0
