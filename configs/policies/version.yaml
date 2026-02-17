@@ -1,1 +1,7 @@
-#hi
+# Central pinning for policy versions.
+# Bump a version when you change semantics that should invalidate caches.
+standardize: "1.0.0"
+protonation: "1.0.0"
+tautomer: "1.0.0"
+conformer: "1.0.0"
+graph: "1.0.0"
